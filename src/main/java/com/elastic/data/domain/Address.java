@@ -9,10 +9,10 @@ import java.util.List;
 @Data
 @RequiredArgsConstructor
 public class Address {
-    @Field(type = FieldType.Long, name = "id")
+    @Field(type = FieldType.Long, name = "id",store = true)
     private Long id;
 
-    @Field(type = FieldType.Text, name = "address_line", analyzer = "ik_max_word")
+    @Field(type = FieldType.Text, name = "address_line", analyzer = "ik_max_word",store = true)
     private String addressLine;
 
     @Field(type = FieldType.Keyword)
