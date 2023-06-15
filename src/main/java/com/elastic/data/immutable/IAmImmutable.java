@@ -1,4 +1,6 @@
 package com.elastic.data.immutable;
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.*;
 
 public class IAmImmutable {
@@ -48,6 +50,14 @@ public class IAmImmutable {
     public Map<String, String> getTestMap() {
         //return (HashMap<Integer, String>) testMap.clone();
         return new HashMap<>(this.testMap);
+    }
+
+
+    public static void main(String[] args) {
+        String clazzName = "ArrayList";
+        String maskedCardNumber = StringUtils.overlay(clazzName, StringUtils.repeat("*", clazzName.length() - 4), 0, clazzName.length() - 4);
+        System.out.println(clazzName);
+        System.out.println(maskedCardNumber);
     }
 }
 
